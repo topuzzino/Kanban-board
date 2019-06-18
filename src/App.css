@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  padding: 20px 0;
+  background-color: #282c34;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.main-container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column-container {
+  width: 30%;
+  border: 1px solid #c4bbff;
+  border-radius: 3px;
+  min-height: 400px;
+}
+
+.column-container h1 {
+  font-size: 18px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #c4bbff;
+  margin-bottom: 5px;
+}
+
+.btn-addTask {
+  cursor: pointer;
+}
+
+.task-container {
+  border-radius: 5px;
+  border: 1px solid #c4bbff;
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  box-shadow: 1px 5px 18px -5px #c4bbff;
+  padding: 7px;
+  color: gray;
+  text-align: left;
+  font-size: 14px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fadein-anim {
+  -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: fade-in-fwd 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.task-container .task-text {
+  flex-grow: 1;
+}
+
+.task-container:hover > .delete-btn {
+  display: inline-block;
+}
+
+.delete-btn {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  display: none;
+}
+
+.delete-btn::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: red;
+  top: 0;
+  right: 5px;
+  transform: rotate(45deg);
+}
+
+.delete-btn::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: red;
+  top: 0;
+  right: 5px;
+  transform: rotate(-45deg);
+}
+
+.delete-btn:hover::before,
+.delete-btn:hover::after {
+}
+
+.taskDate {
+  font-size: 8px;
+}
