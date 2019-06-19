@@ -3,6 +3,8 @@ import { shallow, mount } from "enzyme";
 import Column from "./Column";
 import App from "./App";
 
+jest.mock("./Column", () => {});
+
 describe("First React component test with Enzyme", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<App />);
